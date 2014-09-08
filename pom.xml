@@ -26,7 +26,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>QuestFinder</mainClass>
+                            <mainClass>GenerateData</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
