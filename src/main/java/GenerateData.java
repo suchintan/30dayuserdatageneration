@@ -12,7 +12,8 @@ public class GenerateData {
         int useridmax = 10000000; //10m possible users
         int totalIterations = 7 * 24; //7 days in a week, 24 hours in a day.
         int sessionMax = 4; //0 to 3 session count in any given timeslot
-        int numusers = 75000;
+
+        int numusers = 25000;
 
         for(int c = 0; c < numusers; c++){
             int userid = (int)(Math.random() * useridmax);
