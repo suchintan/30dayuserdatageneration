@@ -12,19 +12,22 @@ public class GenerateData {
         int useridmax = 10000000; //10m possible users
         int totalIterations = 7 * 24; //7 days in a week, 24 hours in a day.
         int sessionMax = 4; //0 to 3 session count in any given timeslot
-        int numusers = 100000;
+        int numusers = 75000;
 
         for(int c = 0; c < numusers; c++){
             int userid = (int)(Math.random() * useridmax);
             String s = userid + ",";
             for(int d = 0; d < totalIterations; d++){
                 //let's say that on average, the user only goes on once every 10 times
+
+                int dayofweek = d / 7;
+                int hour = d % 24;
+                int sessions = 0;
+
                 if((int)(Math.random() * 10) == 0){
-                    int dayofweek = d % 7;
-                    int hour = d % 24;
-                    int sessions = (int)(Math.random()*sessionMax);
-                    s += dayofweek + ":" + hour + ":" + sessions;
+                    sessions = (int)(Math.random()*sessionMax);
                 }
+                s += dayofweek + ":" + hour + ":" + sessions;
 
                 s += ",";
             }
