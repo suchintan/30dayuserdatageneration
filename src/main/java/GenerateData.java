@@ -21,7 +21,7 @@ public class GenerateData {
             for(int d = 0; d < totalIterations; d++){
                 //let's say that on average, the user only goes on once every 10 times
 
-                int dayofweek = d / 7;
+                int dayofweek = d / 24;
                 int hour = d % 24;
                 int sessions = 0;
 
